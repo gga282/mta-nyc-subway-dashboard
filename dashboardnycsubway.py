@@ -47,7 +47,7 @@ st.sidebar.markdown('<p class="sidebar-header">Dashboard Filters</p>', unsafe_al
 def load_data():
     """Load MTA DATA"""
     try:
-        df=pd.read_parquet('/Users/gga/mta_hourly_2022.parquet')
+        df=pd.read_parquet('mta_hourly_2022.parquet')
         return preprocess_data(df)
     except FileNotFoundError:
         st.warning("Original MTA data file not found. Using sample data for demonstration.")
